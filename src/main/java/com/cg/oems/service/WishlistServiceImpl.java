@@ -31,7 +31,9 @@ public class WishlistServiceImpl implements WishlistService{
 		for(Wishlist i:list)
 		{
 			if(i.getProduct().getProductId()==wishlist.getProduct().getProductId())
+			{
 				throw new WishlistException("Product Already Exist in Wishlist");
+			}
 		}
 		wishlistDao.addProductToWishlist(wishlist);
 		return wishlist;
