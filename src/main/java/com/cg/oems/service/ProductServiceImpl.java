@@ -9,12 +9,14 @@ import com.cg.oems.dao.ProductDao;
 import com.cg.oems.entity.Product;
 import com.cg.oems.exception.ProductException;
 
+//product service implementation class implements product service interface
 @Service
 public class ProductServiceImpl implements ProductService{
 
 	@Autowired
 	private ProductDao productDao;
 	
+	//listing all products
 	@Override
 	public List<Product> listAllProducts() throws ProductException {
 		List<Product> list = productDao.listAllProducts();
@@ -25,6 +27,7 @@ public class ProductServiceImpl implements ProductService{
 		return list;
 	}
 
+	//finding a product by its id
 	@Override
 	public Product findProductById(int productId) throws ProductException {
 		Product product = productDao.findProductById(productId);

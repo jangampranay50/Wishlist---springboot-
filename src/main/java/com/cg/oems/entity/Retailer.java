@@ -14,7 +14,7 @@ import javax.persistence.Table;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
-
+//retailer entity class
 @Entity
 @Table(name="retailer_tbl")
 public class Retailer {
@@ -30,10 +30,8 @@ public class Retailer {
 	@Column(name="retailer_location")
 	private String retailerLocation;
 	
-//	@OneToMany(mappedBy="retailer")
-//	@JsonIgnore
-//	private List<Product>  Product=new ArrayList<Product>();
-
+	//getters and setters
+	
 	public int getRetailorId() {
 		return retailorId;
 	}

@@ -15,6 +15,8 @@ import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+
+//product entity class
 @Entity
 @Table(name="product_tbl")
 public class Product {
@@ -33,18 +35,18 @@ public class Product {
 	@Column(name="product_price")
 	private double price;
 	
+	//mapping category 
 	@ManyToOne
 	@JoinColumn(name="category_id")
 	private Category  category;
 	
+	//mapping retailer 
 	@ManyToOne
 	@JoinColumn(name="retailer_id")
 	private Retailer  retailer;
-	
-//	@OneToMany(mappedBy="product")
-//	@JsonIgnore
-//	private List<Wishlist>  wishlist=new ArrayList<Wishlist>();
 
+	//getters and setters
+	
 	public int getProductId() {
 		return productId;
 	}

@@ -14,6 +14,7 @@ import javax.persistence.Table;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
+//category entity class
 @Entity
 @Table(name="category_tbl")
 public class Category {
@@ -27,10 +28,8 @@ public class Category {
 	@Column(name="category_name",length=15)
 	private String categoryName;
 	
-//	@OneToMany(mappedBy="category")
-//	@JsonIgnore
-//	private List<Product>  Product=new ArrayList<Product>();
-
+	//getters and setters
+	
 	public int getCategoryId() {
 		return categoryId;
 	}

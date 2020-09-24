@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @ResponseBody
 public class GlobalExceptionHandler {
 	
+	//handling product exception
 	@ExceptionHandler(ProductException.class)
 	public ResponseEntity<ErrorInfo> handleException(ProductException ex,HttpServletRequest req)
 	{
@@ -27,6 +28,7 @@ public class GlobalExceptionHandler {
 		 return re;
 	}
 
+	//handling wishlist exception
 	@ExceptionHandler(WishlistException.class)
 	public ResponseEntity<ErrorInfo> handleException(WishlistException ex,HttpServletRequest req)
 	{
@@ -40,6 +42,7 @@ public class GlobalExceptionHandler {
 		 return re;
 	}
 	
+	//handling exception
 	@ExceptionHandler(Exception.class)
 	public ResponseEntity<ErrorInfo> handleException(Exception ex,HttpServletRequest req)
 	{

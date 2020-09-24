@@ -1,20 +1,27 @@
 package com.cg.oems.exception;
 import java.time.LocalDateTime;
 
+//error information class
 public class ErrorInfo {
 	private LocalDateTime timestamp;
 	private String errorMessage;
 	private String details;
 	
+	//parameter constructor
 	public ErrorInfo(LocalDateTime timestamp, String errorMessage, String details) {
 		super();
 		this.timestamp = timestamp;
 		this.errorMessage = errorMessage;
 		this.details = details;
 	}
+	
+	//default constructor
 	public ErrorInfo() {
 		super();
 	}
+	
+	//getters and setters
+	
 	public LocalDateTime getTimestamp() {
 		return timestamp;
 	}
@@ -33,7 +40,4 @@ public class ErrorInfo {
 	public void setDetails(String details) {
 		this.details = details;
 	}
-	
-	
-	
 }

@@ -11,6 +11,7 @@ import javax.persistence.ManyToOne;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
+//wishlist entity class
 @Entity
 @Table(name="wishlist_tbl")
 public class Wishlist {
@@ -21,10 +22,12 @@ public class Wishlist {
 	@Column(name="wishlist_id")
     private int wishlistId;
 	
+	//mapping product
 	@ManyToOne
 	@JoinColumn(name="product_id")
 	private Product  product;
 
+	//getters and setters
 	public int getWishlistId() {
 		return wishlistId;
 	}
